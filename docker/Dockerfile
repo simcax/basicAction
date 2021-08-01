@@ -3,7 +3,7 @@ RUN apt update
 # Upgrade pip 
 RUN python3 -m pip install --upgrade pip
 RUN python -m venv /venv
-COPY ./app/requirements.txt /
+COPY ./requirements.txt /
 RUN . venv/bin/activate && python -m pip install psycopg2 && python -m pip install -r requirements.txt
 COPY ./app /app
 ENV SECRET_KEY=b'kepWAzz432vra5QC@TE5'
