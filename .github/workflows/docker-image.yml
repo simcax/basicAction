@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Define tag variables
-      run: echo "Tag is: $(TAG)"
+      run: echo "Tag is > $(TAG)"
       env:
         TAG: $(date +%s)
     - name: Build image
