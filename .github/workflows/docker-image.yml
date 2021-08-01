@@ -14,10 +14,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Define tag variables
+      run: echo "Tag is: $(TAG)"
+      env:
+        TAG: $(date +%s)
     - name: Build image
-      run: docker build . --file docker/Dockerfile --tag simcax/basicaction:$(date +%s) --platform=linux/arm64 
+      run: docker build . --file docker/Dockerfile --tag simcax/basicaction:$(TAG) --platform=linux/arm64 
     - name: Docker Login
       run: docker login -u="${{ secrets.DOCKERUSERNAME }}" -p="${{ secrets.DOCKERPASSWORD }}"
     - name: Docker Push
-      run: docker push simcax/basicaction:$(date +%s)
+      run: docker push simcax/basicaction:$(TAG)
     
