@@ -17,7 +17,7 @@ jobs:
     - name: Define tag variables
       run: echo "Tag is > $(TAG)"
       env:
-        TAG: $(date +%s)
+        TAG: "$(date +%s)"
     - name: Build image
       run: docker build . --file docker/Dockerfile --tag simcax/basicaction:$(TAG) --platform=linux/arm64 
     - name: Docker Login
