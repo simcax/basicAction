@@ -1,0 +1,41 @@
+{
+    "family": "basicAction1",
+    "taskRoleArn": "basicActionTaskRole",
+    "executionRoleArn": "basicActionExecutionRole",
+    "networkMode": "bridge",
+    "containerDefinitions": [
+        {
+            "name": "basic-action",
+            "image": "083598024347.dkr.ecr.eu-north-1.amazonaws.com/basic-action",
+            "cpu": 256,
+            "memory": 1024,
+            "memoryReservation": 512,
+            "portMappings": [
+                {
+                    "containerPort": 5001,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "NoKeys",
+                    "value": "NoValues"
+                }
+            ],
+            "privileged": true,
+            "readonlyRootFilesystem": true,
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "1024",
+    "tags": [
+        {
+            "key": "app",
+            "value": "basic-action"
+        }
+    ]
+}
