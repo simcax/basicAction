@@ -2,7 +2,7 @@
     "family": "basicAction1",
     "taskRoleArn": "basicActionTaskRole",
     "executionRoleArn": "basicActionExecutionRole",
-    "networkMode": "bridge",
+    "networkMode": "awsvpc",
     "containerDefinitions": [
         {
             "name": "basic-action",
