@@ -24,7 +24,7 @@
                 }
             ],
             "privileged": true,
-            "readonlyRootFilesystem": true,
+            "readonlyRootFilesystem": true
         }
     ],
     "requiresCompatibilities": [
