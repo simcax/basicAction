@@ -1,7 +1,7 @@
 {
     "family": "basicAction1",
     "taskRoleArn": "basicActionTaskRole",
-    "executionRoleArn": "basicActionExecutionRole",
+    "executionRoleArn": "arn:aws:iam::083598024347:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
